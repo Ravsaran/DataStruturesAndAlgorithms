@@ -3,7 +3,7 @@ public class ArrayReverse {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array = new int[] {10,20,30,45,60,80,90,100};
+		int[] array = new int[] {10,20,30,45,60,80,90,100,110};
 		int len = array.length-1;
 		
 		int mid = len/2;
