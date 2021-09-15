@@ -30,7 +30,24 @@ public class GraphAdjacencyList {
 		
 		System.out.println("Breadth first traversal of a graph:  ");
 		breadthFirstSearch(1,graph.nodes);
+		boolean[] visited = new boolean[graph.nodes.size()];
+		System.out.println("Depth first traversal of a graph:  ");
+		DepthFirstSearch(1,graph.nodes,visited);
 		
+		
+	}
+
+	private static void DepthFirstSearch(int i, ArrayList<ArrayList<Integer>> nodes, boolean[] visited) {
+		// TODO Auto-generated method stub
+		if(nodes == null) return;
+		visited[i] = true;
+		System.out.println(i);
+		for(int p : nodes.get(i)) {
+			if(!visited[p]) {
+				DepthFirstSearch(p,nodes, visited);
+			}
+		}
+			
 	}
 
 	private static void breadthFirstSearch(int source, ArrayList<ArrayList<Integer>> nodes) {
